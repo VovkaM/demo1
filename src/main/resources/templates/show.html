@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователь</title>
+</head>
+<span>
+        <h4><p th:text="'Имя: ' + ${user.getName()}">VALUE</p></h4>
+        <h4><p th:text="'Фамилия: ' + ${user.getLastName()}">VALUE</p></h4>
+        <h4><p th:text="'Возраст: ' + ${user.getAge()}">VALUE</p></h4>
+        <hr>
+        <form th:action="@{/users}" th:method="GET">
+        <input type="submit" value="Назад"/>
+        </form>
+    </span>
+</body>
+</html>
